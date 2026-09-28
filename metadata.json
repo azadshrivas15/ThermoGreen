@@ -1,0 +1,6 @@
+{
+  "name": "VeggieCare",
+  "description": "VeggieCare precision cold chain monitoring, batch intake management, and telemetry control system for solar micro-cold rooms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

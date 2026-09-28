@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f9f9ff;
+  --color-surface-dim: #d3daef;
+  --color-surface-bright: #f9f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f1f3ff;
+  --color-surface-container: #e9edff;
+  --color-surface-container-high: #e1e8fd;
+  --color-surface-container-highest: #dce2f7;
+  --color-on-surface: #141b2b;
+  --color-on-surface-variant: #40493d;
+  --color-inverse-surface: #293040;
+  --color-inverse-on-surface: #edf0ff;
+  --color-outline: #707a6c;
+  --color-outline-variant: #bfcaba;
+  --color-surface-tint: #1b6d24;
+  --color-primary: #0d631b;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #2e7d32;
+  --color-on-primary-container: #cbffc2;
+  --color-inverse-primary: #88d982;
+  --color-secondary: #00639a;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #51b2fe;
+  --color-on-secondary-container: #00436a;
+  --color-tertiary: #445963;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #5c717b;
+  --color-on-tertiary-container: #e1f4ff;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #a3f69c;
+  --color-primary-fixed-dim: #88d982;
+  --color-on-primary-fixed: #002204;
+  --color-on-primary-fixed-variant: #005312;
+  --color-secondary-fixed: #cee5ff;
+  --color-secondary-fixed-dim: #96ccff;
+  --color-on-secondary-fixed: #001d32;
+  --color-on-secondary-fixed-variant: #004a75;
+  --color-tertiary-fixed: #cfe6f2;
+  --color-tertiary-fixed-dim: #b4cad6;
+  --color-on-tertiary-fixed: #071e27;
+  --color-on-tertiary-fixed-variant: #354a53;
+  --color-background: #f9f9ff;
+  --color-on-background: #141b2b;
+  --color-surface-variant: #dce2f7;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-margin: 1rem;
+  --spacing-gutter: 1rem;
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9ff;
+    font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  }
+  
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Custom Typography Helpers */
+.font-telemetry-num {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.font-telemetry-unit {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-weight: 600;
+}
+
+.font-headline-xl {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+.font-headline-lg {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+.font-headline-md {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.font-body-md {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.font-body-sm {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.font-label-lg {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+
+.font-label-sm {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.font-display-lg-mobile {
+  font-family: 'Inter', 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
